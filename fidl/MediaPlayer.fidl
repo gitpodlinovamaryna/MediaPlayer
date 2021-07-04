@@ -1,0 +1,24 @@
+package MediaPlayer
+
+import model "MediaPlayerTypes.fidl"
+
+interface MediaPlayer {
+  version {major 1 minor 0}
+
+  attribute String trackName readonly
+  attribute UInt16 trackTotalLength readonly
+  attribute UInt16 playPosition
+  attribute CurrentState currentState readonly
+
+  method play fireAndForget {
+  }
+
+  method pause fireAndForget {
+  }
+
+  method next fireAndForget {
+  }
+
+  method previous fireAndForget {
+  }
+}

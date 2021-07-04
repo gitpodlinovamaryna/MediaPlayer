@@ -1,0 +1,10 @@
+package MediaPlayer
+
+typeCollection MediaPlayerTypes {
+  version {major 1 minor 0}
+
+  enumeration CurrentState {
+    PAUSED
+    PLAYING
+  }
+}
