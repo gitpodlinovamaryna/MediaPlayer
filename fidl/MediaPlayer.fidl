@@ -8,7 +8,7 @@ interface MediaPlayer {
   attribute String trackName readonly
   attribute UInt16 trackTotalLength readonly
   attribute UInt16 playPosition
-  attribute CurrentState currentState readonly
+  attribute MediaPlayer.MediaPlayerTypes.CurrentState currentState readonly
 
   method play fireAndForget {
   }
