@@ -4,3 +4,10 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspaces
+
+build/*
+
+src-gen/*
+
+cgen/commonapi-generator/configuration/*
+cgen/commonapi_dbus_generator/configuration/*
