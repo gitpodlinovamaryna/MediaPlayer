@@ -8,6 +8,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/capicxx-core-runtime/include
     ${CMAKE_CURRENT_SOURCE_DIR}/capicxx-dbus-runtime/include
     ${CMAKE_CURRENT_SOURCE_DIR}/dbus-1.12.16
+    ${CMAKE_CURRENT_SOURCE_DIR}/boost_1_76_0
 )
 link_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/capicxx-core-runtime/build
@@ -16,6 +17,7 @@ link_directories(
 )
 add_executable(MediaPlayer
     src/main.cpp
+    src/DevMediaPlayer.cpp
     src-gen/v1/MediaPlayer/MediaPlayerDBusProxy.cpp
     src-gen/v1/MediaPlayer/MediaPlayerDBusDeployment
 )
