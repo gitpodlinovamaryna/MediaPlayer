@@ -1,11 +1,13 @@
 #include <iostream>
 #include "DevMediaPlayer.h"
+#include <string>
+#include <utility>
 
 int main()
 {
-    DevMediaPlayer devMediaPlayer;
+    MediaPlayer::DevMediaPlayer devMediaPlayer;
     std::cout << "DevMediaPlayer created successfully" << std::endl;
-
+    
     return 0;
 }
 
