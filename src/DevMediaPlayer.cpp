@@ -1,11 +1,12 @@
 #include <CommonAPI/CommonAPI.hpp>
 #include <functional>
 #include "DevMediaPlayer.h"
+
 namespace MediaPlayer
 {
 
 DevMediaPlayer::DevMediaPlayer()
-: m_TrackName()
+: m_trackName()
 {
     createProxy();
 }
@@ -30,17 +31,8 @@ void DevMediaPlayer::createProxy()
 
 void DevMediaPlayer::onTrackNameChanged(const std::string& trackName)
 {
-    m_TrackName = trackName;
+    m_trackName = trackName;
     m_trackNameDelegate();
 }
-
-const std::string& DevMediaPlayer::getTrackName()
-{
-    return m_TrackName;
 }
 
-const boost::signals2::signal<void ()>& DevMediaPlayer::getTrackNameDelegate()
-{
-    return m_trackNameDelegate;
-}
-}
