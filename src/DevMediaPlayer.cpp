@@ -2,8 +2,11 @@
 #include <functional>
 #include "DevMediaPlayer.h"
 
+namespace MediaPlayer
+{
+
 DevMediaPlayer::DevMediaPlayer()
-: m_TrackName()
+: m_trackName()
 {
     createProxy();
 }
@@ -28,11 +31,8 @@ void DevMediaPlayer::createProxy()
 
 void DevMediaPlayer::onTrackNameChanged(const std::string& trackName)
 {
-    m_TrackName = trackName;
-    trackNameDelegate();
+    m_trackName = trackName;
+    m_trackNameDelegate();
+}
 }
 
-const std::string& DevMediaPlayer::getTrackName()
-{
-    return m_TrackName;
-}
