@@ -26,6 +26,16 @@ void DevMediaPlayer::createProxy()
         m_pMediaPlayerProxy->getTrackNameAttribute().getChangedEvent().subscribe(
             std::bind(&DevMediaPlayer::onTrackNameChanged, this, std::placeholders::_1)
         );
+        CommonAPI::CallInfo callInfo;
+        m_pMediaPlayerProxy->getTrackNameAttribute().getValueAsync(
+            [this](const CommonAPI::CallStatus&, std::string trackName) {
+              onTrackNameChanged(trackName);
+            },
+            &callInfo);
+    }
+    else
+    {
+        std::cout << "Media Player Proxy is null" << std::endl;
     }
 }
 

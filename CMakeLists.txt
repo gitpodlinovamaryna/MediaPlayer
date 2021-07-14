@@ -23,7 +23,8 @@ add_executable(MediaPlayer
 )
 target_link_libraries(MediaPlayer CommonAPI CommonAPI-DBus dbus-1)
 add_executable(MediaPlayerSim
-    src/sim/mainSim.cpp
+    src/sim/MediaPlayerService.cpp
+    src/sim/MediaPlayerStubImpl.cpp
     src-gen/v1/MediaPlayer/MediaPlayerDBusStubAdapter.cpp
     src-gen/v1/MediaPlayer/MediaPlayerStubDefault
     src-gen/v1/MediaPlayer/MediaPlayerDBusDeployment

@@ -4,7 +4,8 @@
 int main()
 {
     MediaPlayer::DevMediaPlayer devMediaPlayer;
-    std::cout << "DevMediaPlayer created successfully" << std::endl;
+    std::cout << "Track name: " << devMediaPlayer.getTrackName() << std::endl;
+    
     return 0;
 }
 
