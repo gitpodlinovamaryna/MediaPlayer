@@ -10,7 +10,7 @@ class DevMediaPlayer : public IMediaPlayer
 {
 private:
     using MediaPlayerProxy = ::v1::MediaPlayer::MediaPlayerProxy<>;
-    
+
 public:
     DevMediaPlayer();
     virtual ~DevMediaPlayer();
@@ -19,6 +19,8 @@ public:
     const boost::signals2::signal<void ()>& getTrackNameDelegate() override {
         return m_trackNameDelegate;
     }
+
+    void next();
 
 private:
     void createProxy();

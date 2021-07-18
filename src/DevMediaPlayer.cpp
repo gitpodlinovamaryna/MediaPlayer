@@ -39,6 +39,15 @@ void DevMediaPlayer::createProxy()
     }
 }
 
+void DevMediaPlayer::next()
+{
+    if (m_pMediaPlayerProxy)
+    {
+        CommonAPI::CallStatus callStatus;
+        m_pMediaPlayerProxy->next(callStatus);
+    }
+}
+
 void DevMediaPlayer::onTrackNameChanged(const std::string& trackName)
 {
     m_trackName = trackName;

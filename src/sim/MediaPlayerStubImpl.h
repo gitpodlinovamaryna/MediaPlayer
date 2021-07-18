@@ -20,5 +20,6 @@ public:
 
 private:
     std::vector<std::string> m_trackNames;
+    decltype(m_trackNames)::size_type m_playingTrackNumber;
 };
 }
