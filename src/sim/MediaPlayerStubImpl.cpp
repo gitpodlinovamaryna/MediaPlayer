@@ -35,6 +35,7 @@ void MediaPlayerStubImpl::next(const std::shared_ptr<CommonAPI::ClientId> _clien
 
 void MediaPlayerStubImpl::previous(const std::shared_ptr<CommonAPI::ClientId> _client)
 {
+    m_playingTrackNumber == 0? m_playingTrackNumber = (m_trackNames.size() - 1): 
     m_playingTrackNumber = (m_playingTrackNumber - 1) % m_trackNames.size();
     setTrackNameAttribute(m_trackNames[m_playingTrackNumber]);
 }
