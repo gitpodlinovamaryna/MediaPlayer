@@ -14,10 +14,14 @@ private:
 public:
     DevMediaPlayer();
     virtual ~DevMediaPlayer();
-    //const v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() override {return m_currentState;}
     const std::string& getTrackName() override { return m_trackName; }
-    const boost::signals2::signal<void ()>& getTrackNameDelegate() override {
+    const boost::signals2::signal<void ()>& getTrackNameDelegate() override
+    {
         return m_trackNameDelegate;
+    }
+    const v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() override
+    {
+        return m_currentState;
     }
 
     void next();
@@ -28,12 +32,12 @@ public:
 private:
     void createProxy();
     void onTrackNameChanged(const std::string& trackName);
-    //void onCurrentStateAttributeChanged(const v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState)
+    void onCurrentStateChanged(const v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState);
 
     std::shared_ptr<MediaPlayerProxy> m_pMediaPlayerProxy;
     std::string m_trackName;
-    //::v1::MediaPlayer::MediaPlayerTypes::CurrentState m_currentState;
     boost::signals2::signal<void ()> m_trackNameDelegate;
+    ::v1::MediaPlayer::MediaPlayerTypes::CurrentState m_currentState;
+    boost::signals2::signal<void ()> m_currentStateDelegate;
 };
 }
-s

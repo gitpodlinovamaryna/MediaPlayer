@@ -26,22 +26,24 @@ void DevMediaPlayer::createProxy()
         m_pMediaPlayerProxy->getTrackNameAttribute().getChangedEvent().subscribe(
             std::bind(&DevMediaPlayer::onTrackNameChanged, this, std::placeholders::_1)
         );
-        /*m_pMediaPlayerProxy->getCurrentStateAttribute().getChangedEvent().subscribe(
-            std::bind(&DevMediaPlayer::onCurrentStateAttributeChanged, this, std::placeholders::_1)
-        );*/
+
         CommonAPI::CallInfo callInfo;
         m_pMediaPlayerProxy->getTrackNameAttribute().getValueAsync(
             [this](const CommonAPI::CallStatus&, std::string trackName) {
               onTrackNameChanged(trackName);
             },
             &callInfo);
-        /*m_pMediaPlayerProxy->getCurrentStateAttribute().getValueAsync(
-            [this](const CommonAPI::CallStatus&, 
+
+        m_pMediaPlayerProxy->getCurrentStateAttribute().getChangedEvent().subscribe(
+            std::bind(&DevMediaPlayer::onCurrentStateChanged, this, std::placeholders::_1)
+        );
+
+        m_pMediaPlayerProxy->getCurrentStateAttribute().getValueAsync(
+            [this](const CommonAPI::CallStatus&,
             ::v1::MediaPlayer::MediaPlayerTypes::CurrentState currentState) {
-                onCurrentStateAttributeChanged(currentState);
+                onCurrentStateChanged(currentState);
             },
-            &callInfo);*/
-        ))
+            &callInfo);
     }
     else
     {
@@ -91,8 +93,9 @@ void DevMediaPlayer::onTrackNameChanged(const std::string& trackName)
     m_trackNameDelegate();
 }
 
-/*void DevMediaPlayer::onCurrentStateAttributeChanged(const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState){
+void DevMediaPlayer::onCurrentStateChanged(const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState)
+{
     m_currentState = currentState;
-}*/
+    m_currentStateDelegate();
 }
-
+}
