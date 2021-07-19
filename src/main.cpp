@@ -8,7 +8,7 @@ int main()
 
     while (true)
     {
-        std::cout << "Track name: " << devMediaPlayer.getTrackName() << " is " << std::endl;
+        std::cout << "Track name: " << devMediaPlayer.getTrackName() << std::endl;
         std::cout << "Current State is "  << devMediaPlayer.getCurrentStateAttribute() << std::endl;
         std::cout << "1 - play, 2 - pause, 3 - next, 4 - previous, 0 - exit" << std::endl;
         std::cout << "Please select an action:" << std::endl;

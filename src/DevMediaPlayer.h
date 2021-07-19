@@ -19,7 +19,7 @@ public:
     {
         return m_trackNameDelegate;
     }
-    const v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() override
+    const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() override
     {
         return m_currentState;
     }
@@ -32,7 +32,7 @@ public:
 private:
     void createProxy();
     void onTrackNameChanged(const std::string& trackName);
-    void onCurrentStateChanged(const v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState);
+    void onCurrentStateChanged(const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& currentState);
 
     std::shared_ptr<MediaPlayerProxy> m_pMediaPlayerProxy;
     std::string m_trackName;
