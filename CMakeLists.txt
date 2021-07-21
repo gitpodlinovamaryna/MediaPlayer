@@ -17,6 +17,7 @@ link_directories(
 )
 add_executable(MediaPlayer
     src/main.cpp
+    src/MediaPlayerComponent.cpp
     src/DevMediaPlayer.cpp
     src-gen/v1/MediaPlayer/MediaPlayerDBusProxy.cpp
     src-gen/v1/MediaPlayer/MediaPlayerDBusDeployment
