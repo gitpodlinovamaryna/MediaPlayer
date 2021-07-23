@@ -1,4 +1,5 @@
 #include "MediaPlayerComponent.h"
+#include <boost/asio.hpp>
 
 namespace MediaPlayer
 {
@@ -15,7 +16,7 @@ MediaPlayerComponent::~MediaPlayerComponent() = default;
 
 void MediaPlayerComponent::Routine()
 {
-    /*MediaPlayer::DevMediaPlayer devMediaPlayer;
+    MediaPlayer::DevMediaPlayer devMediaPlayer;
     int userChoice;
 
     while (true)
@@ -45,6 +46,9 @@ void MediaPlayerComponent::Routine()
           default:
             break;
         }
-    }*/
+    }
 }
+
+boost::asio::post(m_io_context, MediaPlayerComponent::Routine);
+
 } // namespace MediaPlayer

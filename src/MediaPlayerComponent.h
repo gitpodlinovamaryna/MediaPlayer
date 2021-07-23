@@ -1,6 +1,7 @@
 #pragma once
 
 #include <boost/asio.hpp>
+#include "DevMediaPlayer.h"
 
 namespace MediaPlayer
 {
