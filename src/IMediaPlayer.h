@@ -10,7 +10,9 @@ class IMediaPlayer
 {
 public:
     virtual const std::string& getTrackName() = 0;
-    virtual const boost::signals2::signal<void ()>& getTrackNameDelegate() = 0;
-    virtual const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() = 0;
+    virtual boost::signals2::signal<void ()>& getTrackNameDelegate() = 0;
+
+    virtual const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentState() = 0;
+    virtual boost::signals2::signal<void ()>& getCurrentStateDelegate() = 0;
 };
 }

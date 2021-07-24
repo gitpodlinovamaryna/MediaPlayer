@@ -20,6 +20,10 @@ private:
     MediaPlayerComponent& operator=(const MediaPlayerComponent&) = delete;
     MediaPlayerComponent& operator=(const MediaPlayerComponent&&) = delete;
 
-    boost::asio::io_context m_io_context;
+    void updateUi();
+
+    boost::asio::io_context m_ioContext;
+    boost::asio::executor_work_guard<boost::asio::executor> m_workGuard;
+    MediaPlayer::DevMediaPlayer m_devMediaPlayer;
 };
 } // namespace MediaPlayer

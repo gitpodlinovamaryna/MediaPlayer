@@ -1,5 +1,6 @@
 #include "MediaPlayerComponent.h"
-#include <boost/asio.hpp>
+#include <boost/bind/bind.hpp>
+#include <iostream>
 
 namespace MediaPlayer
 {
@@ -10,13 +11,25 @@ MediaPlayerComponent& MediaPlayerComponent::Instance()
 }
 
 MediaPlayerComponent::MediaPlayerComponent()
-{}
+: m_ioContext()
+, m_workGuard(m_ioContext.get_executor())
+, m_devMediaPlayer()
+{
+    m_devMediaPlayer.getTrackNameDelegate().connect([this] {
+        boost::asio::post(m_ioContext, boost::bind(&MediaPlayerComponent::updateUi, this));
+    });
+    m_devMediaPlayer.getCurrentStateDelegate().connect([this] {
+        boost::asio::post(m_ioContext, boost::bind(&MediaPlayerComponent::updateUi, this));
+    });
+}
 
 MediaPlayerComponent::~MediaPlayerComponent() = default;
 
 void MediaPlayerComponent::Routine()
 {
-    MediaPlayer::DevMediaPlayer devMediaPlayer;
+    std::cout << "\033[2J" << std::endl;
+    m_ioContext.run();
+    /*MediaPlayer::DevMediaPlayer devMediaPlayer;
     int userChoice;
 
     while (true)
@@ -46,9 +59,10 @@ void MediaPlayerComponent::Routine()
           default:
             break;
         }
-    }
+    }*/
 }
 
-boost::asio::post(m_io_context, MediaPlayerComponent::Routine);
+void MediaPlayerComponent::updateUi()
+{}
 
 } // namespace MediaPlayer

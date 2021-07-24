@@ -14,14 +14,20 @@ private:
 public:
     DevMediaPlayer();
     virtual ~DevMediaPlayer();
+
     const std::string& getTrackName() override { return m_trackName; }
-    const boost::signals2::signal<void ()>& getTrackNameDelegate() override
+    boost::signals2::signal<void ()>& getTrackNameDelegate() override
     {
         return m_trackNameDelegate;
     }
-    const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentStateAttribute() override
+
+    const ::v1::MediaPlayer::MediaPlayerTypes::CurrentState& getCurrentState() override
     {
         return m_currentState;
+    }
+    boost::signals2::signal<void ()>& getCurrentStateDelegate() override
+    {
+        return m_currentStateDelegate;
     }
 
     void next();
