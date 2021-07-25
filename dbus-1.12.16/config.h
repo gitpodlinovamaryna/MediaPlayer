@@ -8,7 +8,7 @@
 #define DBUS_BINDIR "/usr/local/bin"
 
 /* Define to build X11 functionality */
-/* #undef DBUS_BUILD_X11 */
+#define DBUS_BUILD_X11 1
 
 /* whether -export-dynamic was passed to libtool */
 /* #undef DBUS_BUILT_R_DYNAMIC */
@@ -60,7 +60,7 @@
 /* #undef DBUS_ENABLE_VERBOSE_MODE */
 
 /* Define to enable X11 auto-launch */
-/* #undef DBUS_ENABLE_X11_AUTOLAUNCH */
+#define DBUS_ENABLE_X11_AUTOLAUNCH 1
 
 /* Extension for executables, typically empty or .exe */
 #define DBUS_EXEEXT ""
@@ -90,7 +90,7 @@
 #define DBUS_SYSTEM_SOCKET "/usr/local/var/run/dbus/system_bus_socket"
 
 /* Full path to the launch helper test program in the builddir */
-#define DBUS_TEST_LAUNCH_HELPER_BINARY "/home/linuxoid/dbus-1.12.16/bus/dbus-daemon-launch-helper-test"
+#define DBUS_TEST_LAUNCH_HELPER_BINARY "/home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon-launch-helper-test"
 
 /* Where to put test sockets */
 #define DBUS_TEST_SOCKET_DIR "/tmp"
@@ -120,7 +120,7 @@
 /* #undef DBUS_WINCE */
 
 /* Define if GLib, GObject, GIO are available */
-/* #undef DBUS_WITH_GLIB */
+#define DBUS_WITH_GLIB 1
 
 /* The maximum number of connections that can be handled at once */
 /* #undef FD_SETSIZE */
@@ -219,7 +219,7 @@
 #define HAVE_GETRLIMIT 1
 
 /* Define if you have gio-unix-2.0 */
-/* #undef HAVE_GIO_UNIX */
+#define HAVE_GIO_UNIX 1
 
 /* Have GNU-style varargs macros */
 #define HAVE_GNUC_VARARGS 1
@@ -282,7 +282,7 @@
 #define HAVE_RAISE 1
 
 /* SELinux support */
-/* #undef HAVE_SELINUX */
+#define HAVE_SELINUX 1
 
 /* Define to 1 if you have the `setenv' function. */
 #define HAVE_SETENV 1
@@ -489,7 +489,7 @@
 		
 
 /* Define to 1 if the X Window System is missing or not being used. */
-#define X_DISPLAY_MISSING 1
+/* #undef X_DISPLAY_MISSING */
 
 /* Define to enable BSD features */
 /* #undef _BSD_SOURCE */

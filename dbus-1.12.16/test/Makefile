@@ -94,10 +94,10 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-#am__append_1 = \
-#	test-utils-glib.c \
-#	test-utils-glib.h \
-#	$(NULL)
+am__append_1 = \
+	test-utils-glib.c \
+	test-utils-glib.h \
+	$(NULL)
 
 TESTS = $(am__append_3) $(am__EXEEXT_15) $(am__EXEEXT_16)
 #am__append_2 = test-bus-launch-helper.sh \
@@ -107,59 +107,59 @@ TESTS = $(am__append_3) $(am__EXEEXT_15) $(am__EXEEXT_16)
 noinst_PROGRAMS = $(am__EXEEXT_10) $(am__EXEEXT_11)
 nobase_testexec_PROGRAMS = $(am__EXEEXT_9)
 #am__append_5 = manual-paths
-#am__append_6 = \
-#	test-corrupt \
-#	test-dbus-daemon \
-#	test-dbus-daemon-eavesdrop \
-#	test-fdpass \
-#	test-message \
-#	test-monitor \
-#	test-loopback \
-#	test-marshal \
-#	test-refs \
-#	test-relay \
-#	test-server-oom \
-#	test-syntax \
-#	test-syslog \
-#	test-uid-permissions \
-#	test-variant \
-#	$(NULL)
+am__append_6 = \
+	test-corrupt \
+	test-dbus-daemon \
+	test-dbus-daemon-eavesdrop \
+	test-fdpass \
+	test-message \
+	test-monitor \
+	test-loopback \
+	test-marshal \
+	test-refs \
+	test-relay \
+	test-server-oom \
+	test-syntax \
+	test-syslog \
+	test-uid-permissions \
+	test-variant \
+	$(NULL)
 
 
 # These binaries are used in tests but are not themselves tests
-#am__append_7 = \
-#	test-apparmor-activation \
-#	$(NULL)
+am__append_7 = \
+	test-apparmor-activation \
+	$(NULL)
 
-#am__append_8 = \
-#	test-sd-activation \
-#	$(NULL)
+am__append_8 = \
+	test-sd-activation \
+	$(NULL)
 
-#am__append_9 = \
-#	test-dbus-daemon-fork.sh \
-#	$(NULL)
+am__append_9 = \
+	test-dbus-daemon-fork.sh \
+	$(NULL)
 
 
 # Only runnable when installed, not from the source tree
-#am__append_10 = \
-#	integration/transient-services.sh \
-#	test-apparmor-activation.sh \
-#	$(NULL)
+am__append_10 = \
+	integration/transient-services.sh \
+	test-apparmor-activation.sh \
+	$(NULL)
 
 
 # Testing dbus-launch relies on special code in that binary.
-##am__append_11 = \
-##	test-dbus-launch-eval.sh \
-##	$(NULL)
-
-###am__append_12 = \
-###	test-dbus-launch-x11.sh \
-###	$(NULL)
-
-#am__append_13 = \
-#	manual-authz \
-#	manual-test-thread-blocking \
+#am__append_11 = \
+#	test-dbus-launch-eval.sh \
 #	$(NULL)
+
+#am__append_12 = \
+#	test-dbus-launch-x11.sh \
+#	$(NULL)
+
+am__append_13 = \
+	manual-authz \
+	manual-test-thread-blocking \
+	$(NULL)
 
 am__append_14 = $(installable_tests)
 am__append_15 = $(installable_tests)
@@ -193,27 +193,27 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-#am__EXEEXT_1 = test-apparmor-activation$(EXEEXT)
+am__EXEEXT_1 = test-apparmor-activation$(EXEEXT)
 am__EXEEXT_2 = $(am__EXEEXT_1)
 #am__EXEEXT_3 = manual-paths$(EXEEXT)
-#am__EXEEXT_4 = manual-authz$(EXEEXT) \
-#	manual-test-thread-blocking$(EXEEXT)
+am__EXEEXT_4 = manual-authz$(EXEEXT) \
+	manual-test-thread-blocking$(EXEEXT)
 am__EXEEXT_5 = manual-backtrace$(EXEEXT) manual-dir-iter$(EXEEXT) \
 	manual-tcp$(EXEEXT) $(am__EXEEXT_3) $(am__EXEEXT_4)
-#am__EXEEXT_6 = test-corrupt$(EXEEXT) \
-#	test-dbus-daemon$(EXEEXT) \
-#	test-dbus-daemon-eavesdrop$(EXEEXT) \
-#	test-fdpass$(EXEEXT) \
-#	test-message$(EXEEXT) \
-#	test-monitor$(EXEEXT) \
-#	test-loopback$(EXEEXT) \
-#	test-marshal$(EXEEXT) test-refs$(EXEEXT) \
-#	test-relay$(EXEEXT) \
-#	test-server-oom$(EXEEXT) \
-#	test-syntax$(EXEEXT) test-syslog$(EXEEXT) \
-#	test-uid-permissions$(EXEEXT) \
-#	test-variant$(EXEEXT)
-#am__EXEEXT_7 = test-sd-activation$(EXEEXT)
+am__EXEEXT_6 = test-corrupt$(EXEEXT) \
+	test-dbus-daemon$(EXEEXT) \
+	test-dbus-daemon-eavesdrop$(EXEEXT) \
+	test-fdpass$(EXEEXT) \
+	test-message$(EXEEXT) \
+	test-monitor$(EXEEXT) \
+	test-loopback$(EXEEXT) \
+	test-marshal$(EXEEXT) test-refs$(EXEEXT) \
+	test-relay$(EXEEXT) \
+	test-server-oom$(EXEEXT) \
+	test-syntax$(EXEEXT) test-syslog$(EXEEXT) \
+	test-uid-permissions$(EXEEXT) \
+	test-variant$(EXEEXT)
+am__EXEEXT_7 = test-sd-activation$(EXEEXT)
 am__EXEEXT_8 = test-shell$(EXEEXT) test-printf$(EXEEXT) \
 	$(am__EXEEXT_6) $(am__EXEEXT_7)
 #am__EXEEXT_9 = $(am__EXEEXT_2) \
@@ -238,7 +238,7 @@ libdbus_testutils_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	$(top_builddir)/dbus/libdbus-internal.la
 am__libdbus_testutils_la_SOURCES_DIST = test-utils.c test-utils.h \
 	test-utils-glib.c test-utils-glib.h
-#am__objects_1 = test-utils-glib.lo
+am__objects_1 = test-utils-glib.lo
 am_libdbus_testutils_la_OBJECTS = test-utils.lo $(am__objects_1)
 libdbus_testutils_la_OBJECTS = $(am_libdbus_testutils_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
@@ -677,10 +677,10 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-#am__EXEEXT_12 =  \
-#	test-dbus-daemon-fork.sh
-##am__EXEEXT_13 = test-dbus-launch-eval.sh
-###am__EXEEXT_14 = test-dbus-launch-x11.sh
+am__EXEEXT_12 =  \
+	test-dbus-daemon-fork.sh
+#am__EXEEXT_13 = test-dbus-launch-eval.sh
+#am__EXEEXT_14 = test-dbus-launch-x11.sh
 am__EXEEXT_15 = $(am__EXEEXT_12) $(am__EXEEXT_13) $(am__EXEEXT_14)
 am__EXEEXT_16 = $(am__EXEEXT_8)
 TEST_SUITE_LOG = test-suite.log
@@ -728,7 +728,7 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing aclocal-1.16
 ADT_LIBS = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
@@ -737,9 +737,9 @@ APPARMOR_2_10_LIBS =
 APPARMOR_CFLAGS = 
 APPARMOR_LIBS = 
 AR = ar
-AUTOCONF = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing automake-1.16
+AUTOCONF = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing automake-1.16
 AWK = mawk
 BUILD_FILEVERSION = 
 BUILD_TIMESTAMP = 
@@ -781,14 +781,14 @@ DBUS_STATIC_BUILD_CPPFLAGS =
 DBUS_SYSTEM_BUS_DEFAULT_ADDRESS = unix:path=/usr/local/var/run/dbus/system_bus_socket
 DBUS_SYSTEM_PID_FILE = /usr/local/var/run/dbus/pid
 DBUS_SYSTEM_SOCKET = /usr/local/var/run/dbus/system_bus_socket
-DBUS_TEST_DATA = /home/linuxoid/dbus-1.12.16/test/data
-DBUS_TEST_EXEC = /home/linuxoid/dbus-1.12.16/test
+DBUS_TEST_DATA = /home/maryna/MediaPlayer/dbus-1.12.16/test/data
+DBUS_TEST_EXEC = /home/maryna/MediaPlayer/dbus-1.12.16/test
 DBUS_TEST_USER = nobody
 DBUS_UINT64_CONSTANT = (val##UL)
 DBUS_USER = messagebus
 DBUS_VERSION = 1.12.16
 DBUS_X_CFLAGS = 
-DBUS_X_LIBS = 
+DBUS_X_LIBS =   -lX11 
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
@@ -818,10 +818,10 @@ FGREP = /usr/bin/grep -F
 GCOV = 
 GENHTML = 
 GETTEXT_PACKAGE = dbus-1
-GIO_UNIX_CFLAGS = 
-GIO_UNIX_LIBS = 
-GLIB_CFLAGS = 
-GLIB_LIBS = 
+GIO_UNIX_CFLAGS = -pthread -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GIO_UNIX_LIBS = -lgio-2.0 -lgobject-2.0 -lglib-2.0
+GLIB_CFLAGS = -pthread -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_LIBS = -lgio-2.0 -lgobject-2.0 -lglib-2.0
 GREP = /usr/bin/grep
 HAVE_VISIBILITY = 1
 INSTALL = /usr/bin/install -c
@@ -846,7 +846,7 @@ LT_CURRENT = 22
 LT_REVISION = 11
 LT_SYS_LIBRARY_PATH = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NETWORK_libs = 
@@ -875,7 +875,7 @@ RC =
 R_DYNAMIC_LDFLAG = 
 SED = /usr/bin/sed
 SELINUX_CFLAGS = 
-SELINUX_LIBS = 
+SELINUX_LIBS = -lselinux -lpthread
 SET_MAKE = 
 SHELL = /bin/bash
 SOVERSION = 3
@@ -884,7 +884,7 @@ SYSCONFDIR_FROM_PKGDATADIR = /usr/local/etc
 SYSTEMCTL = /usr/bin/systemctl
 SYSTEMD_CFLAGS = 
 SYSTEMD_LIBS = 
-TEST_LAUNCH_HELPER_BINARY = /home/linuxoid/dbus-1.12.16/bus/dbus-daemon-launch-helper-test
+TEST_LAUNCH_HELPER_BINARY = /home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon-launch-helper-test
 TEST_LISTEN = unix:tmpdir=/tmp
 TEST_SOCKET_DIR = /tmp
 THREAD_LIBS = -lpthread  
@@ -903,10 +903,10 @@ X_EXTRA_LIBS =
 X_LIBS = 
 X_PRE_LIBS = 
 YELP_BUILD = no
-abs_builddir = /home/linuxoid/dbus-1.12.16/test
-abs_srcdir = /home/linuxoid/dbus-1.12.16/test
-abs_top_builddir = /home/linuxoid/dbus-1.12.16
-abs_top_srcdir = /home/linuxoid/dbus-1.12.16
+abs_builddir = /home/maryna/MediaPlayer/dbus-1.12.16/test
+abs_srcdir = /home/maryna/MediaPlayer/dbus-1.12.16/test
+abs_top_builddir = /home/maryna/MediaPlayer/dbus-1.12.16
+abs_top_srcdir = /home/maryna/MediaPlayer/dbus-1.12.16
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -939,7 +939,7 @@ ifGNUmake =
 ifnGNUmake = 
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/install-sh
+install_sh = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1068,43 +1068,43 @@ installable_test_meta_with_config = \
 
 installcheck_tests = $(dist_installable_test_scripts) $(am__append_15)
 installcheck_environment = \
-	export XDG_DATA_HOME=/home/linuxoid/dbus-1.12.16/test/XDG_DATA_HOME; \
-	export XDG_DATA_DIRS=/home/linuxoid/dbus-1.12.16/test/XDG_DATA_DIRS:$(DESTDIR)$(datadir); \
-	export XDG_RUNTIME_DIR=/home/linuxoid/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
+	export XDG_DATA_HOME=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_DATA_HOME; \
+	export XDG_DATA_DIRS=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_DATA_DIRS:$(DESTDIR)$(datadir); \
+	export XDG_RUNTIME_DIR=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
 	export DBUS_SESSION_BUS_ADDRESS=do-not-use-real-session:; \
 	export DBUS_TEST_DAEMON=$(DESTDIR)$(DBUS_DAEMONDIR)/dbus-daemon$(EXEEXT); \
 	export DBUS_TEST_DBUS_LAUNCH=$(DESTDIR)$(bindir)/dbus-launch$(EXEEXT); \
 	export DBUS_TEST_DBUS_MONITOR=$(DESTDIR)$(bindir)/dbus-monitor$(EXEEXT); \
 	export DBUS_TEST_DBUS_SEND=$(DESTDIR)$(bindir)/dbus-send$(EXEEXT); \
 	export DBUS_TEST_DBUS_UUIDGEN=$(DESTDIR)$(bindir)/dbus-uuidgen$(EXEEXT); \
-	export DBUS_TEST_EXEC=/home/linuxoid/dbus-1.12.16/test; \
-	export DBUS_TEST_HOMEDIR=/home/linuxoid/dbus-1.12.16/dbus; \
+	export DBUS_TEST_EXEC=/home/maryna/MediaPlayer/dbus-1.12.16/test; \
+	export DBUS_TEST_HOMEDIR=/home/maryna/MediaPlayer/dbus-1.12.16/dbus; \
 	export DBUS_TEST_DATADIR=$(DESTDIR)$(datadir); \
 	export DBUS_TEST_UNINSTALLED=1; \
-	export HOME=/home/linuxoid/dbus-1.12.16/dbus; \
+	export HOME=/home/maryna/MediaPlayer/dbus-1.12.16/dbus; \
 	${NULL}
 
 
 # Tests in bus/config-parser.c rely on these specific values for XDG_* and
 # DBUS_TEST_BUILDDIR.
 AM_TESTS_ENVIRONMENT = \
-	export XDG_DATA_HOME=/home/linuxoid/dbus-1.12.16/test/XDG_DATA_HOME; \
-	export XDG_DATA_DIRS=/home/linuxoid/dbus-1.12.16/test/XDG_DATA_DIRS:/home/linuxoid/dbus-1.12.16/test/XDG_DATA_DIRS2; \
-	export XDG_RUNTIME_DIR=/home/linuxoid/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
+	export XDG_DATA_HOME=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_DATA_HOME; \
+	export XDG_DATA_DIRS=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_DATA_DIRS:/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_DATA_DIRS2; \
+	export XDG_RUNTIME_DIR=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
 	export DBUS_FATAL_WARNINGS=1; \
 	export DBUS_SESSION_BUS_ADDRESS=do-not-use-real-session:; \
-	export DBUS_TEST_BUILDDIR=/home/linuxoid/dbus-1.12.16/test; \
-	export DBUS_TEST_SRCDIR=/home/linuxoid/dbus-1.12.16/test; \
-	export DBUS_TEST_DAEMON=/home/linuxoid/dbus-1.12.16/bus/dbus-daemon$(EXEEXT); \
-	export DBUS_TEST_DBUS_LAUNCH=/home/linuxoid/dbus-1.12.16/tools/dbus-launch$(EXEEXT); \
-	export DBUS_TEST_DBUS_MONITOR=/home/linuxoid/dbus-1.12.16/tools/dbus-monitor$(EXEEXT); \
-	export DBUS_TEST_DBUS_SEND=/home/linuxoid/dbus-1.12.16/tools/dbus-send$(EXEEXT); \
-	export DBUS_TEST_DBUS_UUIDGEN=/home/linuxoid/dbus-1.12.16/tools/dbus-uuidgen$(EXEEXT); \
-	export DBUS_TEST_DATA=/home/linuxoid/dbus-1.12.16/test/data; \
-	export DBUS_TEST_EXEC=/home/linuxoid/dbus-1.12.16/test; \
-	export DBUS_TEST_HOMEDIR=/home/linuxoid/dbus-1.12.16/dbus; \
+	export DBUS_TEST_BUILDDIR=/home/maryna/MediaPlayer/dbus-1.12.16/test; \
+	export DBUS_TEST_SRCDIR=/home/maryna/MediaPlayer/dbus-1.12.16/test; \
+	export DBUS_TEST_DAEMON=/home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon$(EXEEXT); \
+	export DBUS_TEST_DBUS_LAUNCH=/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-launch$(EXEEXT); \
+	export DBUS_TEST_DBUS_MONITOR=/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-monitor$(EXEEXT); \
+	export DBUS_TEST_DBUS_SEND=/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-send$(EXEEXT); \
+	export DBUS_TEST_DBUS_UUIDGEN=/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-uuidgen$(EXEEXT); \
+	export DBUS_TEST_DATA=/home/maryna/MediaPlayer/dbus-1.12.16/test/data; \
+	export DBUS_TEST_EXEC=/home/maryna/MediaPlayer/dbus-1.12.16/test; \
+	export DBUS_TEST_HOMEDIR=/home/maryna/MediaPlayer/dbus-1.12.16/dbus; \
 	export DBUS_TEST_UNINSTALLED=1; \
-	export HOME=/home/linuxoid/dbus-1.12.16/dbus; \
+	export HOME=/home/maryna/MediaPlayer/dbus-1.12.16/dbus; \
 	$(NULL)
 
 manual_authz_SOURCES = manual-authz.c
@@ -2481,11 +2481,11 @@ uninstalled-config-local:
 	for F in $(in_data); do \
 		$(MKDIR_P) "$${F%/*}"; \
 		sed \
-			-e 's,[@]DBUS_TEST_DATA[@],/home/linuxoid/dbus-1.12.16/test/data,' \
-			-e 's,[@]DBUS_TEST_EXEC[@],/home/linuxoid/dbus-1.12.16/test,' \
+			-e 's,[@]DBUS_TEST_DATA[@],/home/maryna/MediaPlayer/dbus-1.12.16/test/data,' \
+			-e 's,[@]DBUS_TEST_EXEC[@],/home/maryna/MediaPlayer/dbus-1.12.16/test,' \
 			-e 's,[@]DBUS_USER[@],$(DBUS_USER),' \
 			-e 's,[@]EXEEXT[@],$(EXEEXT),' \
-			-e 's,[@]TEST_LAUNCH_HELPER_BINARY[@],/home/linuxoid/dbus-1.12.16/bus/dbus-daemon-launch-helper-test$(EXEEXT),' \
+			-e 's,[@]TEST_LAUNCH_HELPER_BINARY[@],/home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon-launch-helper-test$(EXEEXT),' \
 			-e 's,[@]TEST_LISTEN[@],$(TEST_LISTEN),' \
 			< $(srcdir)/"$$F" > "$${F%.in}"; \
 	done

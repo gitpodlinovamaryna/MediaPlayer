@@ -3,4 +3,4 @@ Name=com.example.SendDeniedByNonexistentAppArmorLabel
 Exec=/bin/false SendDeniedByNonexistentAppArmorLabel
 SystemdService=dbus-com.example.SendDeniedByNonexistentAppArmorLabel.service
 # This label is not defined in any AppArmor profile
-AssumedAppArmorLabel=/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation-com.example.SendDeniedByNonexistentAppArmorLabel
+AssumedAppArmorLabel=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation-com.example.SendDeniedByNonexistentAppArmorLabel

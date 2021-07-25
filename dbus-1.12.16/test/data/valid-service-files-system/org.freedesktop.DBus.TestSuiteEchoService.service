@@ -1,5 +1,5 @@
 [D-BUS Service]
 Name=org.freedesktop.DBus.TestSuiteEchoService
-Exec=/home/linuxoid/dbus-1.12.16/test/test-service
+Exec=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-service
 User=anyrandomuser
 

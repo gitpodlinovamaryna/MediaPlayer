@@ -1,0 +1,9 @@
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/install/strip.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/install/local.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/install.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/list_install_components.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/rebuild_cache.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/edit_cache.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/dist.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/maintainer-clean.dir
+/home/maryna/MediaPlayer/capicxx-dbus-runtime/build/CMakeFiles/CommonAPI-DBus.dir

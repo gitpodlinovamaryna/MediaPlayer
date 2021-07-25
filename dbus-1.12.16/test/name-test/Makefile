@@ -458,7 +458,7 @@ SH_LOG_COMPILE = $(SH_LOG_COMPILER) $(AM_SH_LOG_FLAGS) $(SH_LOG_FLAGS)
 am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/build-aux/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing aclocal-1.16
 ADT_LIBS = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
@@ -467,9 +467,9 @@ APPARMOR_2_10_LIBS =
 APPARMOR_CFLAGS = 
 APPARMOR_LIBS = 
 AR = ar
-AUTOCONF = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing automake-1.16
+AUTOCONF = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing automake-1.16
 AWK = mawk
 BUILD_FILEVERSION = 
 BUILD_TIMESTAMP = 
@@ -511,14 +511,14 @@ DBUS_STATIC_BUILD_CPPFLAGS =
 DBUS_SYSTEM_BUS_DEFAULT_ADDRESS = unix:path=/usr/local/var/run/dbus/system_bus_socket
 DBUS_SYSTEM_PID_FILE = /usr/local/var/run/dbus/pid
 DBUS_SYSTEM_SOCKET = /usr/local/var/run/dbus/system_bus_socket
-DBUS_TEST_DATA = /home/linuxoid/dbus-1.12.16/test/data
-DBUS_TEST_EXEC = /home/linuxoid/dbus-1.12.16/test
+DBUS_TEST_DATA = /home/maryna/MediaPlayer/dbus-1.12.16/test/data
+DBUS_TEST_EXEC = /home/maryna/MediaPlayer/dbus-1.12.16/test
 DBUS_TEST_USER = nobody
 DBUS_UINT64_CONSTANT = (val##UL)
 DBUS_USER = messagebus
 DBUS_VERSION = 1.12.16
 DBUS_X_CFLAGS = 
-DBUS_X_LIBS = 
+DBUS_X_LIBS =   -lX11 
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
@@ -548,10 +548,10 @@ FGREP = /usr/bin/grep -F
 GCOV = 
 GENHTML = 
 GETTEXT_PACKAGE = dbus-1
-GIO_UNIX_CFLAGS = 
-GIO_UNIX_LIBS = 
-GLIB_CFLAGS = 
-GLIB_LIBS = 
+GIO_UNIX_CFLAGS = -pthread -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GIO_UNIX_LIBS = -lgio-2.0 -lgobject-2.0 -lglib-2.0
+GLIB_CFLAGS = -pthread -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_LIBS = -lgio-2.0 -lgobject-2.0 -lglib-2.0
 GREP = /usr/bin/grep
 HAVE_VISIBILITY = 1
 INSTALL = /usr/bin/install -c
@@ -576,7 +576,7 @@ LT_CURRENT = 22
 LT_REVISION = 11
 LT_SYS_LIBRARY_PATH = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NETWORK_libs = 
@@ -605,7 +605,7 @@ RC =
 R_DYNAMIC_LDFLAG = 
 SED = /usr/bin/sed
 SELINUX_CFLAGS = 
-SELINUX_LIBS = 
+SELINUX_LIBS = -lselinux -lpthread
 SET_MAKE = 
 SHELL = /bin/bash
 SOVERSION = 3
@@ -614,7 +614,7 @@ SYSCONFDIR_FROM_PKGDATADIR = /usr/local/etc
 SYSTEMCTL = /usr/bin/systemctl
 SYSTEMD_CFLAGS = 
 SYSTEMD_LIBS = 
-TEST_LAUNCH_HELPER_BINARY = /home/linuxoid/dbus-1.12.16/bus/dbus-daemon-launch-helper-test
+TEST_LAUNCH_HELPER_BINARY = /home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon-launch-helper-test
 TEST_LISTEN = unix:tmpdir=/tmp
 TEST_SOCKET_DIR = /tmp
 THREAD_LIBS = -lpthread  
@@ -633,10 +633,10 @@ X_EXTRA_LIBS =
 X_LIBS = 
 X_PRE_LIBS = 
 YELP_BUILD = no
-abs_builddir = /home/linuxoid/dbus-1.12.16/test/name-test
-abs_srcdir = /home/linuxoid/dbus-1.12.16/test/name-test
-abs_top_builddir = /home/linuxoid/dbus-1.12.16
-abs_top_srcdir = /home/linuxoid/dbus-1.12.16
+abs_builddir = /home/maryna/MediaPlayer/dbus-1.12.16/test/name-test
+abs_srcdir = /home/maryna/MediaPlayer/dbus-1.12.16/test/name-test
+abs_top_builddir = /home/maryna/MediaPlayer/dbus-1.12.16
+abs_top_srcdir = /home/maryna/MediaPlayer/dbus-1.12.16
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -669,7 +669,7 @@ ifGNUmake =
 ifnGNUmake = 
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/linuxoid/dbus-1.12.16/build-aux/install-sh
+install_sh = ${SHELL} /home/maryna/MediaPlayer/dbus-1.12.16/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -714,23 +714,23 @@ TEST_EXTENSIONS = .sh
 LOG_DRIVER = env AM_TAP_AWK='$(AWK)' $(SHELL) $(top_srcdir)/build-aux/tap-driver.sh
 SH_LOG_DRIVER = $(LOG_DRIVER)
 LOG_COMPILER = \
-	/home/linuxoid/dbus-1.12.16/tools/dbus-run-session$(EXEEXT) \
-	--config-file=/home/linuxoid/dbus-1.12.16/test/name-test/uninstalled-session.conf \
-	--dbus-daemon=/home/linuxoid/dbus-1.12.16/bus/dbus-daemon$(EXEEXT) \
+	/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-run-session$(EXEEXT) \
+	--config-file=/home/maryna/MediaPlayer/dbus-1.12.16/test/name-test/uninstalled-session.conf \
+	--dbus-daemon=/home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon$(EXEEXT) \
 	-- \
 	$(NULL)
 
 SH_LOG_COMPILER = $(SHELL)
 #AM_TESTS_ENVIRONMENT = \
 #        export DBUS_SESSION_BUS_ADDRESS=do-not-use-real-session:; \
-#        export DBUS_TOP_BUILDDIR=/home/linuxoid/dbus-1.12.16; \
-#        export DBUS_TOP_SRCDIR=/home/linuxoid/dbus-1.12.16; \
-#        export PATH="/home/linuxoid/dbus-1.12.16/bus:$$PATH"; \
+#        export DBUS_TOP_BUILDDIR=/home/maryna/MediaPlayer/dbus-1.12.16; \
+#        export DBUS_TOP_SRCDIR=/home/maryna/MediaPlayer/dbus-1.12.16; \
+#        export PATH="/home/maryna/MediaPlayer/dbus-1.12.16/bus:$$PATH"; \
 #        export PYTHON=/usr/bin/python3; \
-#        export DBUS_TEST_DATA=/home/linuxoid/dbus-1.12.16/test/data; \
-#        export DBUS_TEST_DAEMON=/home/linuxoid/dbus-1.12.16/bus/dbus-daemon$(EXEEXT); \
-#        export DBUS_TEST_DBUS_LAUNCH=/home/linuxoid/dbus-1.12.16/tools/dbus-launch$(EXEEXT); \
-#        export XDG_RUNTIME_DIR=/home/linuxoid/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
+#        export DBUS_TEST_DATA=/home/maryna/MediaPlayer/dbus-1.12.16/test/data; \
+#        export DBUS_TEST_DAEMON=/home/maryna/MediaPlayer/dbus-1.12.16/bus/dbus-daemon$(EXEEXT); \
+#        export DBUS_TEST_DBUS_LAUNCH=/home/maryna/MediaPlayer/dbus-1.12.16/tools/dbus-launch$(EXEEXT); \
+#        export XDG_RUNTIME_DIR=/home/maryna/MediaPlayer/dbus-1.12.16/test/XDG_RUNTIME_DIR; \
 #        unset DBUS_SESSION_BUS_ADDRESS; \
 #        unset DBUS_SESSION_BUS_PID; \
 #        $(NULL)
@@ -1317,7 +1317,7 @@ uninstall-am:
 
 
 #uninstalled-session.conf: $(top_builddir)/bus/session.conf Makefile
-#	$(SED) -e 's|<standard_session_servicedirs.*$$|<servicedir>/home/linuxoid/dbus-1.12.16/test/data/valid-service-files</servicedir>|g' \
+#	$(SED) -e 's|<standard_session_servicedirs.*$$|<servicedir>/home/maryna/MediaPlayer/dbus-1.12.16/test/data/valid-service-files</servicedir>|g' \
 #		-e 's|<include.*$$||g' \
 #		< $< > $@
 

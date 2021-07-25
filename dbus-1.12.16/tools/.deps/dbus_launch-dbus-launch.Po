@@ -102,8 +102,9 @@ dbus_launch-dbus-launch.o: dbus-launch.c /usr/include/stdc-predef.h \
  /usr/include/inttypes.h ../dbus/dbus-file.h ../dbus/dbus-string.h \
  /usr/include/x86_64-linux-gnu/sys/poll.h \
  /usr/include/x86_64-linux-gnu/bits/poll.h \
- ../dbus/dbus-threads-internal.h ../dbus/dbus-sysdeps-unix.h \
- tool-common.h
+ ../dbus/dbus-threads-internal.h /usr/include/X11/Xlib.h \
+ /usr/include/X11/X.h /usr/include/X11/Xfuncproto.h \
+ /usr/include/X11/Xosdefs.h ../dbus/dbus-sysdeps-unix.h tool-common.h
 
 /usr/include/stdc-predef.h:
 
@@ -378,6 +379,14 @@ dbus-launch.h:
 /usr/include/x86_64-linux-gnu/bits/poll.h:
 
 ../dbus/dbus-threads-internal.h:
+
+/usr/include/X11/Xlib.h:
+
+/usr/include/X11/X.h:
+
+/usr/include/X11/Xfuncproto.h:
+
+/usr/include/X11/Xosdefs.h:
 
 ../dbus/dbus-sysdeps-unix.h:
 

@@ -1,5 +1,5 @@
 [D-BUS Service]
 Name=org.freedesktop.DBus.TestSuiteShellEchoServiceFail
-Exec=/home/linuxoid/dbus-1.12.16/test/test-shell-service "this should 'fail' because of an unterminated quote
+Exec=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-shell-service "this should 'fail' because of an unterminated quote
 User=anyrandomuser
 

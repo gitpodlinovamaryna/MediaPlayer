@@ -1,4 +1,4 @@
 [D-BUS Service]
 Name=org.freedesktop.DBus.TestSuite.PrivServer
-Exec=/home/linuxoid/dbus-1.12.16/test/name-test/test-privserver
+Exec=/home/maryna/MediaPlayer/dbus-1.12.16/test/name-test/test-privserver
 

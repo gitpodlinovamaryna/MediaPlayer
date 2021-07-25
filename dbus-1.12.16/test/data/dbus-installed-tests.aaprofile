@@ -23,7 +23,7 @@
 #include <tunables/global>
 #include <tunables/sys>
 
-/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation {
+/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation {
   #include <abstractions/apparmor_api/change_profile>
   #include <abstractions/apparmor_api/find_mountpoint>
   #include <abstractions/apparmor_api/is_enabled>
@@ -49,11 +49,11 @@
     network,
     signal,
 
-    deny dbus send peer=(label=/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation//com.example.SendDeniedByAppArmorLabel),
+    deny dbus send peer=(label=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation//com.example.SendDeniedByAppArmorLabel),
     deny dbus send peer=(name=com.example.SendDeniedByAppArmorName),
 
     # There is no profile of this name. That's deliberate.
-    deny dbus send peer=(label=/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation-com.example.SendDeniedByNonexistentAppArmorLabel),
+    deny dbus send peer=(label=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation-com.example.SendDeniedByNonexistentAppArmorLabel),
   }
 
   # Used when we check that XML-based policy still works.
@@ -93,6 +93,6 @@
     network,
     signal,
 
-    deny dbus receive peer=(label=/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation//caller),
+    deny dbus receive peer=(label=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation//caller),
   }
 }

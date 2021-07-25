@@ -1,5 +1,5 @@
-abs_top_builddir=/home/linuxoid/dbus-1.12.16
-abs_top_srcdir=/home/linuxoid/dbus-1.12.16
+abs_top_builddir=/home/maryna/MediaPlayer/dbus-1.12.16
+abs_top_srcdir=/home/maryna/MediaPlayer/dbus-1.12.16
 prefix=
 exec_prefix=
 bindir=${exec_prefix}/bin

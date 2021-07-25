@@ -2,4 +2,4 @@
 Name=com.example.SendDeniedByAppArmorLabel
 Exec=/bin/false SendDeniedByAppArmorLabel
 SystemdService=dbus-com.example.SendDeniedByAppArmorLabel.service
-AssumedAppArmorLabel=/home/linuxoid/dbus-1.12.16/test/test-apparmor-activation//com.example.SendDeniedByAppArmorLabel
+AssumedAppArmorLabel=/home/maryna/MediaPlayer/dbus-1.12.16/test/test-apparmor-activation//com.example.SendDeniedByAppArmorLabel
